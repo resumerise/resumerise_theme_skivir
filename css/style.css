@@ -228,13 +228,18 @@ img {
 	font-family: var(--body-font);
 }
 #experience__description,
-#project__description{
+#project__description,
+#publication__description{
 	font-family: cursive;
 }
-#project__list label{
+#project__list label,
+#education__list label,
+#interest__list label{
 	font-weight: 500;
 }
-#project__list ul{
+#project__list ul,
+#education__list ul,
+#interest__list ul{
 	list-style: circle;
 	margin-left: var(--mb-1-5);
 }

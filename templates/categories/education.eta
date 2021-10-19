@@ -37,7 +37,7 @@
 			<%~ include('list', {
 				label: it.resume.settings?.labels?.categoryProperty?.education?.courses, 
 				data: education.courses,
-				id: 'education-courses',
+				id: 'education__list',
 			}) %>
 		<% }) %>
 	</div>

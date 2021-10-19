@@ -1,9 +1,9 @@
-<section id="certifications">
+<section class="certifications section">
 	<% if (it.resume.settings?.labels?.categoryProperty?.certificate?.categoryTitle) { %>
-		<h1><%= it.resume.settings?.labels?.categoryProperty?.certificate?.categoryTitle %></h1>
+		<h3 class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.certificate?.categoryTitle %></h3>
 	<% } %>
-	<% it.resume?.certifications.forEach(function(certificate) { %>
-	<div class="item content">
+	<div class="certifications__container">
+		<% it.resume?.certifications.forEach(function(certificate) { %>
 		<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
 		<%~ include('key-value-item', {
 			label: it.resume.settings?.labels?.categoryProperty?.certificate?.issueDate, 
@@ -20,7 +20,7 @@
 			value: certificate.title,
 			id: 'certificate-title',
 		}) %>
+		<% }) %>
 	</div>
-	<% }) %>
 	<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
 </section>
