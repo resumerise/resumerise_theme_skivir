@@ -1,31 +1,31 @@
-<section id='basics'>
+<section class='home section'>
     <%~ include('profile-picture', {
         picture: it.resume.basics.picture
     }) %>
     <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
     <% if (it.resume.settings?.labels?.categoryProperty?.basics?.categoryTitle) { %>
-        <h1><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></h1>
+        <h3 class="home__title"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></h3>
     <% } %>
-    <div class="content">
+    <div class="home__container">
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.basics?.website, 
             value: it.resume.basics.website,
-            id: 'basics-website',
+            id: 'home__info',
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.basics?.email, 
             value: it.resume.basics.email,
-            id: 'basics-email',
+            id: 'home__info',
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.basics?.phone, 
             value: it.resume.basics.phone,
-            id: 'basics-phone',
+            id: 'home__info',
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.basics?.summary, 
             value: it.resume.basics.summary,
-            id: 'basics-summary',
+            id: 'home__info home__description',
         }) %>
     </div>
 </section>
