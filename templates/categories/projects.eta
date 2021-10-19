@@ -1,14 +1,14 @@
-<section id="project">
+<section class="project section">
 	<% if (it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle) { %>
-		<h1><%= it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle %></h1>
+		<h3 class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle %></h3>
 	<% } %>
-	<% it.resume?.projects.forEach(function(project) { %>
-		<div class="item content">
+	<div class="project__container">
+		<% it.resume?.projects.forEach(function(project) { %>
 			<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.project, showDelete: true, id: project.id}) %>
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.project?.title, 
 				value: project.title,
-				id: 'project-title',
+				id: 'project__title',
 			}) %>
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.project?.client, 
@@ -25,29 +25,29 @@
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.project?.summary, 
 				value: project.summary,
-				id: 'project-summary',
+				id: 'project__description',
 			}) %>
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.project?.website, 
 				value: project.website,
-				id: 'project-website',
+				id: 'project__item',
 			}) %>
 			<%~ include('list', {
 				label: it.resume.settings?.labels?.categoryProperty?.project?.products, 
 				data: project.products,
-				id: 'project-products',
+				id: 'project__list',
 			}) %>
 			<%~ include('list', {
 				label: it.resume.settings?.labels?.categoryProperty?.project?.roles, 
 				data: project.roles,
-				id: 'project-roles',
+				id: 'project__list',
 			}) %>
 			<%~ include('list', {
 				label: it.resume.settings?.labels?.categoryProperty?.project?.highlights, 
 				data: project.highlights,
-				id: 'project-highlights',
+				id: 'project__list',
 			}) %>
-		</div>
-	<% }) %>
+		<% }) %>
+	</div>
 	<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.project}) %>
 </section>

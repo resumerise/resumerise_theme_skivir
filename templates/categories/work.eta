@@ -1,14 +1,14 @@
-<section id="work">
+<section class="experience section">
     <% if (it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle) { %>
-        <h1><%= it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle %></h1>
+        <h3 class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle %></h3>
     <% } %>
-    <% it.resume?.work.forEach(function(work) { %>
-    <div class="item content">
+    <div class="experience__container">
+        <% it.resume?.work.forEach(function(work) { %>
         <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work, showDelete: true, id: work.id}) %>
         <% if (work.company) { %>
-        <h2>
-            <%= work.company %>
-        </h2>
+        <h4 class="experience__title">
+            <%= work.company %> / Title
+        </h4>
         <% } %>
         <%~ include('date-range', {
             formatDate: it.formatDate,
@@ -20,24 +20,24 @@
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
             value: work.position,
-            id: 'work-position',
+            id: 'experience__info',
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
             value: work.website,
-            id: 'work-website',
+            id: 'experience__info',
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.work?.summary, 
             value: work.summary,
-            id: 'work-summary',
+            id: 'experience__description',
         }) %>
         <%~ include('list', {
 			label: it.resume.settings?.labels?.categoryProperty?.work?.highlights, 
 			data: work.highlights,
-			id: 'work-highlights',
+			id: 'experience__description',
 		}) %>
+        <% }) %>
     </div>
-    <% }) %>
     <%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
 </section>

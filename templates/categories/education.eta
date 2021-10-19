@@ -1,11 +1,11 @@
-<section id="education">
+<section class="education section">
 	<% if(it.resume.settings?.labels?.categoryProperty?.education?.categoryTitle) { %>
-		<h1>
+		<h3 class="section__title">
 			<%= it.resume.settings.labels.categoryProperty.education.categoryTitle %>
-		</h1>
+		</h3>
 	<% } %>
-	<% it.resume?.education.forEach(function(education) { %>
-		<div class="item content">
+	<div class="education__container">
+		<% it.resume?.education.forEach(function(education) { %>
 			<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.education, showDelete: true, id: education.id}) %>
 			<%~ include('date-range', {
 				formatDate: it.formatDate, 
@@ -39,7 +39,7 @@
 				data: education.courses,
 				id: 'education-courses',
 			}) %>
-		</div>
-	<% }) %>
+		<% }) %>
+	</div>
 	<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.education}) %>
 </section>

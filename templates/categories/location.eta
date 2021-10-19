@@ -1,33 +1,33 @@
-<section id='location'>
+<section class='location section'>
     <% if (it.resume.settings?.labels?.categoryProperty?.location?.categoryTitle) { %>
-        <h1><%= it.resume.settings?.labels?.categoryProperty?.location?.categoryTitle %></h1>
+        <h3 class='section__title'><%= it.resume.settings?.labels?.categoryProperty?.location?.categoryTitle %></h3>
     <% } %>
-    <div class="content">
+    <div class="location__container">
         <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.location}) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.location?.address, 
             value: it.resume.basics?.location?.address,
-            id: 'location-address',
+            id: 'location__info',
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.location?.postalCode, 
             value: it.resume.basics?.location?.postalCode,
-            id: 'location-postal-code',
+            id: 'location__info',
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.location?.city, 
             value: it.resume.basics?.location?.city,
-            id: 'location-city',
+            id: 'location__info',
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.location?.countryCode, 
             value: it.resume.basics?.location?.countryCode,
-            id: 'location-country-code',
+            id: 'location__info',
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.location?.region, 
             value: it.resume.basics?.location?.region,
-            id: 'location-region',
+            id: 'location__info',
         }) %>
     </div>
 </section>

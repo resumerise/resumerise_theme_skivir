@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@400;500&display=swap');
 /*==================== VARIABLES CSS ====================*/
 
 :root {
@@ -20,6 +21,7 @@
 	--scroll-bar-thumb-color: #c6c6d2;
 	/*========== Font and typography ==========*/
 	--body-font: 'Poppins', sans-serif;
+	--second-font: 'Orbitron', sans-serif;
 	/* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
 	--biggest-font-size: 4rem;
 	--bigger-font-size: 3rem;
@@ -95,10 +97,6 @@ h1, h2, h3, h4 {
 	font-weight: var(--font-semi-bold);
 }
 
-ul {
-	list-style: none;
-}
-
 a {
 	text-decoration: none;
 }
@@ -109,9 +107,12 @@ img {
 }
 
 .label {
-	display: none;
 	color: var(--black-color);
+	font-weight: 500;
 }
+/* .span{
+	font-family: cursive;
+} */
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 
@@ -121,6 +122,7 @@ img {
 
 .section__title {
 	font-size: var(--h1-font-size);
+	color: var(--text-color-light);
 }
 
 .section__subtitle {
@@ -136,6 +138,10 @@ img {
 .key-value-item-bold {
 	font-weight: var(--font-semi-bold);
 	color: var(--black-color);
+}
+
+.home .label, .home .label {
+	display: none;
 }
 
 /*==================== LAYOUT ====================*/
@@ -165,43 +171,78 @@ img {
 .l-main {
 	padding: var(--mb-1);
 }
-.box{
+
+.box {
 	background-color: red;
 	font-size: 6rem;
 }
 
 /*==================== HOME SECTION ====================*/
-.home__img{
+
+.home__img {
 	margin: auto;
 	display: block;
 	border-radius: 50%;
 }
-.home__title{
+
+.home__title {
 	font-size: var(--h1-font-size);
 	color: var(--first-color);
 	margin-top: var(--mb-1);
 	text-align: center;
 }
-#home__description{
+
+#home__description {
 	margin-top: var(--mb-0-5);
 	text-align: center;
 }
 
-
 /*==================== LOCATION SECTION ====================*/
 
-
 /*==================== PROFILE SECTION ====================*/
+.profiles__container{
+	display: flex;
+	flex-direction: column;
+	row-gap: var(--mb-0-5);
+}
 
-
-/*==================== EXPERIENCE SECTION ====================*/
+/*==================== EXPERIENCE & PROJECT & EDUCATION SECTION ====================*/
+#experience__description ul{
+	list-style: none;
+}
+.experience__container,
+.project__container{
+	display: flex;
+	flex-direction: column;
+	row-gap: var(--mb-1);
+}
+.experience__title,
+#project__title{
+	font-size: var(--h3-font-size);
+	margin-top: var(--mb-1);
+}
+.date{
+	margin: var(--mb-0-5) 0;
+}
+#experience__info{
+	font-family: var(--body-font);
+}
+#experience__description,
+#project__description{
+	font-family: cursive;
+}
+#project__list label{
+	font-weight: 500;
+}
+#project__list ul{
+	list-style: circle;
+	margin-left: var(--mb-1-5);
+}
 
 
 /*==================== EDUCATION SECTION ====================*/
 
-
 /*==================== SKILLS SECTION ====================*/
-
 
 /*==================== MEDIA QUERIES ====================*/
 
@@ -212,6 +253,4 @@ img {
 	}
 }
 
-@media screen and (min-width: 768px) {
-	
-}
+@media screen and (min-width: 768px) {}
