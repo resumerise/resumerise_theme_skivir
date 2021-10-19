@@ -18,7 +18,7 @@
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.profile?.url, 
                 value: profile.url,
-                id: 'profiles__info',
+                id: 'profiles__info url',
             }) %>
         </div>
     <% }) %>

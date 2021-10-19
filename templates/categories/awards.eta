@@ -23,7 +23,7 @@
 		<%~ include('key-value-item', {
 			label: it.resume.settings?.labels?.categoryProperty?.award?.summary, 
 			value: award.summary,
-			id: 'award-summary',
+			id: 'awards__description',
 		}) %>
 	</div>
 	<% }) %>

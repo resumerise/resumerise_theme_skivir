@@ -1,11 +1,11 @@
-<section id="volunteer">
+<section class="volunteer section">
 	<% if(it.resume.settings?.labels?.categoryProperty?.volunteer?.categoryTitle) { %>
-		<h1>
+		<h3 class="section__title">
 			<%= it.resume.settings.labels.categoryProperty.volunteer.categoryTitle %>
-		</h1>
+		</h3>
 	<% } %>
-	<% it.resume?.volunteer.forEach(function(volunteer) { %>
-		<div class="item content">
+	<div class="volunteer__container">
+		<% it.resume?.volunteer.forEach(function(volunteer) { %>
 			<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.volunteer, showDelete: true, id: volunteer.id}) %>
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.volunteer?.organization, 
@@ -32,14 +32,14 @@
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.volunteer?.summary, 
 				value: volunteer.summary,
-				id: 'volunteer-summary',
+				id: 'volunteer__description',
 			}) %>
 			<%~ include('list', {
 				label: it.resume.settings?.labels?.categoryProperty?.volunteer?.highlights, 
 				data: volunteer.highlights,
-				id: 'volunteer-highlights',
+				id: 'volunteer__list',
 			}) %>
-		</div>
-	<% }) %>
+		<% }) %>
+	</div>
 	<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.volunteer}) %>
 </section>
