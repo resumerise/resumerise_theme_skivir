@@ -9,12 +9,20 @@
 			<%= it.widgetCss %>
 
 			/*==================== GOOGLE FONTS ====================*/
-			@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@400;500&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
 			:root{
-				--second-font: 'Orbitron', sans-serif;
+				--second-font: 'Noto Sans Mono', monospace;
 			}
 			body {
 				font-family: 'Poppins', sans-serif;
+			}
+			#experience__description span,
+			 #project__description span,
+			  #publication__description span,
+			   #reference__description span,
+			    #awards__description span,
+				 #volunteer__description span {
+				font-family: var(--second-font);
 			}
 		</style>
 	</head>

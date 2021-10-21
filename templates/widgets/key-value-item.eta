@@ -1,7 +1,7 @@
 <div class="key-value-item" id="<%= it.id %>">
 <% if(it.label) { %>
     <label class="label">
-        <%= it.label %> / Text <br>
+        <%= it.label %> / <span class="label__span">Text </span> <br>
     </label>
 <% } %>
 <% if(it.value) { %>

@@ -184,12 +184,14 @@ img {
 	margin: auto;
 	display: block;
 	border-radius: 50%;
+	margin-bottom: var(--mb-1);
 }
 
 .home__title {
 	font-size: var(--h1-font-size);
 	color: var(--first-color);
 	margin-top: var(--mb-1);
+	display: none;
 	text-align: center;
 }
 
@@ -237,8 +239,8 @@ img {
 	font-family: var(--body-font);
 }
 
-#experience__description, #project__description, #publication__description, #reference__description, #awards__description, #volunteer__description {
-	font-family: cursive;
+.label__span{
+	font-weight: normal;
 }
 
 #project__list label, #education__list label, #interest__list label, #skills__list label, #volunteer__list label {
@@ -294,7 +296,7 @@ img {
 		grid-column: 1/3;
 		align-items: center;
 	}
-	.experience,
+	/* .experience,
 	.awards,
 	.volunteer{
 		margin-top: -13rem;
@@ -304,5 +306,14 @@ img {
 	}
 	.references{
 		margin-top: -10rem;
+	} */
+	/* .r{
+		text-align: right;
+		margin-right: var(--mb-2-5);
+	}
+	.l{} */
+	.section__title{
+		margin-bottom: var(--mb-2);
+		text-align: left;
 	}
 }

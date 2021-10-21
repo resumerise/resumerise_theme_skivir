@@ -1,6 +1,6 @@
 <section class="certifications section">
 	<% if (it.resume.settings?.labels?.categoryProperty?.certificate?.categoryTitle) { %>
-		<h3 class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.certificate?.categoryTitle %></h3>
+		<h3 class="section__title r"><%= it.resume.settings?.labels?.categoryProperty?.certificate?.categoryTitle %></h3>
 	<% } %>
 	<div class="certifications__container">
 		<% it.resume?.certifications.forEach(function(certificate) { %>
