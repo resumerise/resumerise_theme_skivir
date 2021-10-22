@@ -8,7 +8,7 @@
 		<%~ include('key-value-item', {
 			label: it.resume.settings?.labels?.categoryProperty?.certificate?.issueDate, 
 			value: it.formatDate(certificate.issueDate, it.resume.settings),
-			id: 'certificate-issueDate',
+			id: 'date',
 		}) %>
 		<%~ include('key-value-item', {
 			label: it.resume.settings?.labels?.categoryProperty?.certificate?.issuer, 

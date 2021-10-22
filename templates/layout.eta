@@ -16,12 +16,8 @@
 			body {
 				font-family: 'Poppins', sans-serif;
 			}
-			#experience__description span,
-			 #project__description span,
-			  #publication__description span,
-			   #reference__description span,
-			    #awards__description span,
-				 #volunteer__description span {
+			.date,
+			#date{
 				font-family: var(--second-font);
 			}
 		</style>

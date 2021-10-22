@@ -18,7 +18,7 @@
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.publication?.releaseDate, 
                 value: it.formatDate(publication.releaseDate, it.resume.settings),
-                id: 'publication-releaseDate',
+                id: 'date',
             }) %>
             <%~ include('key-value-item', {
                 label: it.resume.settings?.labels?.categoryProperty?.publication?.website, 

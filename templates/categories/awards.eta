@@ -13,7 +13,7 @@
 		<%~ include('key-value-item', {
 			label: it.resume.settings?.labels?.categoryProperty?.award?.date, 
 			value: it.formatDate(award.date, it.resume.settings),
-			id: 'award-date',
+			id: 'date',
 		}) %>
 		<%~ include('key-value-item', {
 			label: it.resume.settings?.labels?.categoryProperty?.award?.awarder, 

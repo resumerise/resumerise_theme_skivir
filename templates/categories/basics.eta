@@ -5,19 +5,19 @@
         }) %>
         <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
         <% if (it.resume.settings?.labels?.categoryProperty?.basics?.categoryTitle) { %>
-            <h3 class="home__title"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></h3>
+            <h3 class="home__text"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></h3>
         <% } %>
     </div>
     <div class="home__profession">
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.basics?.name, 
             value: it.resume.basics.name,
-            id: 'basics-name',
+            id: 'home__title',
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.basics?.label, 
             value: it.resume.basics.label,
-            id: 'basics-label',
+            id: 'home__subtitle',
         }) %>
     </div>
 
