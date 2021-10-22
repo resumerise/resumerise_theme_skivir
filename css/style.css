@@ -247,10 +247,6 @@ img {
 	font-family: var(--body-font);
 }
 
-.label__span{
-	font-weight: normal;
-}
-
 #project__list label, #education__list label, #interest__list label, #skills__list label, #volunteer__list label {
 	font-weight: 500;
 }
@@ -305,9 +301,13 @@ img {
 	}
 	.home{
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		grid-column: 1/3;
 		align-items: center;
+		justify-items: flex-start;
+	}
+	.home__profession{
+		margin-right: 2.5rem;
 	}
 	/* .experience,
 	.awards,
