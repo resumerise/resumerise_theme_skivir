@@ -1,5 +1,5 @@
 <section class='home section'>
-    <div class="box1">
+    <div class="home__picture">
         <%~ include('profile-picture', {
             picture: it.resume.basics.picture
         }) %>
@@ -7,6 +7,18 @@
         <% if (it.resume.settings?.labels?.categoryProperty?.basics?.categoryTitle) { %>
             <h3 class="home__title"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></h3>
         <% } %>
+    </div>
+    <div class="home__profession">
+        <%~ include('key-value-item', {
+            label: it.resume.settings?.labels?.categoryProperty?.basics?.name, 
+            value: it.resume.basics.name,
+            id: 'basics-name',
+        }) %>
+        <%~ include('key-value-item', {
+            label: it.resume.settings?.labels?.categoryProperty?.basics?.label, 
+            value: it.resume.basics.label,
+            id: 'basics-label',
+        }) %>
     </div>
 
     <div class="home__container">
