@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@400;500&display=swap');
-/*==================== VARIABLES CSS ====================*/
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
 :root {
+	--second-font: 'Noto Sans Mono', monospace;
 	--header-height: 3rem;
 	/*========== Colors ==========*/
 	--first-color: #5757e0;
@@ -76,11 +76,16 @@
 	box-sizing: border-box;
 }
 
+.date, #date {
+	font-family: var(--second-font);
+}
+
 html {
 	scroll-behavior: smooth;
 }
 
 body {
+	font-family: 'Poppins', sans-serif;
 	margin: 0 0 var(--header-height) 0;
 	font-size: var(--normal-font-size);
 	background-color: var(--body-color);
@@ -179,13 +184,15 @@ img {
 }
 
 /*==================== HOME SECTION ====================*/
+
 .home__img {
 	margin: auto;
 	display: block;
 	border-radius: 50%;
 	margin-bottom: var(--mb-1);
 }
-.home__text{
+
+.home__text {
 	display: none;
 }
 
@@ -219,7 +226,7 @@ img {
 }
 
 .url {
-	font-size: var(--small-font-size) !important; 
+	font-size: var(--small-font-size) !important;
 }
 
 /*==================== EXPERIENCE & PROJECT & EDUCATION SECTION ====================*/
@@ -251,12 +258,7 @@ img {
 	font-weight: 500;
 }
 
-#project__list ul,
-#education__list ul,
-#interest__list ul,
-#skills__list ul,
-#volunteer__list ul,
-#experience__list ul {
+#project__list ul, #education__list ul, #interest__list ul, #skills__list ul, #volunteer__list ul, #experience__list ul {
 	list-style: circle;
 	margin-left: var(--mb-1-5);
 }
@@ -294,19 +296,18 @@ img {
 		display: grid;
 		grid-template-columns: .4fr 1fr;
 	} */
-
-	.l-main{
+	.l-main {
 		display: grid;
 		grid-template-columns: 1fr .4fr;
 	}
-	.home{
+	.home {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-column: 1/3;
 		align-items: center;
 		justify-items: flex-start;
 	}
-	.home__profession{
+	.home__profession {
 		margin-right: 2.5rem;
 	}
 	/* .experience,
@@ -325,7 +326,7 @@ img {
 		margin-right: var(--mb-2-5);
 	}
 	.l{} */
-	.section__title{
+	.section__title {
 		margin-bottom: var(--mb-2-5);
 		text-align: left;
 	}
