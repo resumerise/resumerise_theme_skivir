@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@400;500&display=swap');
-/*==================== VARIABLES CSS ====================*/
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
 :root {
+	--second-font: 'Noto Sans Mono', monospace;
 	--header-height: 3rem;
 	/*========== Colors ==========*/
 	--first-color: #5757e0;
@@ -76,11 +76,16 @@
 	box-sizing: border-box;
 }
 
+.date, #date {
+	font-family: var(--second-font);
+}
+
 html {
 	scroll-behavior: smooth;
 }
 
 body {
+	font-family: 'Poppins', sans-serif;
 	margin: 0 0 var(--header-height) 0;
 	font-size: var(--normal-font-size);
 	background-color: var(--body-color);

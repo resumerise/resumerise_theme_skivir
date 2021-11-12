@@ -5,21 +5,8 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
 		<title><%= it.resume.basics?.name ? it.resume.basics.name : ''%></title>
 		<style>
-			<%= it.css %>
-			<%= it.widgetCss %>
-
-			/*==================== GOOGLE FONTS ====================*/
-			@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
-			:root{
-				--second-font: 'Noto Sans Mono', monospace;
-			}
-			body {
-				font-family: 'Poppins', sans-serif;
-			}
-			.date,
-			#date{
-				font-family: var(--second-font);
-			}
+			<%~ it.css %>
+			<%~ it.widgetCss %>
 		</style>
 	</head>
 	<body>
