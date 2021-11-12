@@ -1,28 +1,32 @@
-<section class="skills section">
+<section class="skills section" id="skills">
 	<% if(it.resume.settings?.labels?.categoryProperty?.skill?.categoryTitle) { %>
 		<h3 class="section__title r">
 			<%= it.resume.settings.labels.categoryProperty.skill.categoryTitle %>
 		</h3>
 	<% } %>
-	<% it.resume?.skills.forEach(function(skill) { %>
-		<div class="skills__container">
-			<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.skill}) %>
-			<%~ include('key-value-item', {
-				label: it.resume.settings?.labels?.categoryProperty?.skill?.name, 
-				value: skill.name,
-				id: 'skill-name',
-			}) %>
-			<%~ include('key-value-item', {
-				label: it.resume.settings?.labels?.categoryProperty?.skill?.level, 
-				value: skill.level,
-				id: 'skill-level',
-			}) %>
-			<%~ include('list', {
-				label: it.resume.settings?.labels?.categoryProperty?.project?.keywords, 
-				data: skill.keywords,
-				id: 'skills__list',
-			}) %>
-		</div>
-	<% }) %>
+	<div class="skills__container">
+		<% it.resume?.skills.forEach(function(skill) { %>
+			<div class="wrapper">
+				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.skill}) %>
+				<%~ include('key-value-item', {
+					label: it.resume.settings?.labels?.categoryProperty?.skill?.name, 
+					value: skill.name,
+					showLabel: false,
+					id: 'wrapper__title',
+				}) %>
+				<%~ include('key-value-item', {
+					label: it.resume.settings?.labels?.categoryProperty?.skill?.level, 
+					value: skill.level,
+					showLabel: false,
+					id: 'skill-level',
+				}) %>
+				<%~ include('list', {
+					label: it.resume.settings?.labels?.categoryProperty?.project?.keywords, 
+					data: skill.keywords,
+					id: 'section__list',
+				}) %>
+			</div>
+		<% }) %>
+	</div>
 	<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.skill}) %>
 </section>

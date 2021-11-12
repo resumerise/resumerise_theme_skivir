@@ -1,4 +1,4 @@
-<section class='location section'>
+<section class='location section' id="location">
     <% if (it.resume.settings?.labels?.categoryProperty?.location?.categoryTitle) { %>
         <h3 class='section__title r'><%= it.resume.settings?.labels?.categoryProperty?.location?.categoryTitle %></h3>
     <% } %>
@@ -7,26 +7,31 @@
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.location?.address, 
             value: it.resume.basics?.location?.address,
+            showLabel: false,
             id: 'location__info',
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.location?.postalCode, 
             value: it.resume.basics?.location?.postalCode,
+            showLabel: false,
             id: 'location__info',
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.location?.city, 
             value: it.resume.basics?.location?.city,
+            showLabel: false,
             id: 'location__info',
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.location?.countryCode, 
             value: it.resume.basics?.location?.countryCode,
+            showLabel: false,
             id: 'location__info',
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.location?.region, 
             value: it.resume.basics?.location?.region,
+            showLabel: false,
             id: 'location__info',
         }) %>
     </div>
