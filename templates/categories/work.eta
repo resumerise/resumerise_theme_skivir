@@ -6,11 +6,19 @@
         <% it.resume?.work.forEach(function(work) { %>
             <div class="wrapper">
                 <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work, showDelete: true, id: work.id}) %>
-                <% if (work.company) { %>
-                <h4 id="wrapper__title">
-                    <%= work.company %> / Title
-                </h4>
-                <% } %>
+                <div class="title__wrapper">
+                    <% if (work.company) { %>
+                    <h4 id="wrapper__title">
+                        <%= work.company %> / Title
+                    </h4>
+                    <% } %>
+                    <%~ include('key-value-item', {
+                        label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
+                        value: work.position,
+                        showLabel: false,
+                        id: 'title__detail',
+                    }) %>
+                </div>
                 <%~ include('date-range', {
                     formatDate: it.formatDate,
                     startDate: work.startDate,
@@ -18,12 +26,6 @@
                     present: work.present,
                     settings: it.resume.settings,
                     showLabel: false,
-                }) %>
-                <%~ include('key-value-item', {
-                    label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
-                    value: work.position,
-                    showLabel: false,
-                    id: 'experience__info',
                 }) %>
                 <%~ include('key-value-item', {
                     label: it.resume.settings?.labels?.categoryProperty?.work?.website, 

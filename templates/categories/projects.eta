@@ -6,23 +6,25 @@
 		<% it.resume?.projects.forEach(function(project) { %>
 			<div class="wrapper">
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.project, showDelete: true, id: project.id}) %>
-				<%~ include('key-value-item', {
-					label: it.resume.settings?.labels?.categoryProperty?.project?.title, 
-					value: project.title,
-					showLabel: false,
-					id: 'wrapper__title',
-				}) %>
+				<div class="title__wrapper">
+					<%~ include('key-value-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.project?.title, 
+						value: project.title,
+						showLabel: false,
+						id: 'wrapper__title',
+					}) %>
+					<%~ include('key-value-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.project?.client, 
+						value: project.client,
+						id: 'title__detail',
+					}) %>
+				</div>
 				<%~ include('date-range', {
 					formatDate: it.formatDate,
 					startDate: project.startDate,
 					endDate: project.endDate,
 					present: project.present,
 					settings: it.resume.settings
-				}) %>
-				<%~ include('key-value-item', {
-					label: it.resume.settings?.labels?.categoryProperty?.project?.client, 
-					value: project.client,
-					id: 'project-client',
 				}) %>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.project?.website, 
