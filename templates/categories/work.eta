@@ -9,7 +9,7 @@
                 <div class="title__wrapper">
                     <% if (work.company) { %>
                     <h4 id="wrapper__title">
-                        <%= work.company %> / Title
+                        <%= work.company %>
                     </h4>
                     <% } %>
                     <%~ include('key-value-item', {
