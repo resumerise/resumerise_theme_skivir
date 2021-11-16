@@ -1,5 +1,4 @@
 <% if(it.picture) { %>
-    <div class='picture'>
-        <img src="<%= it.picture %>">
-    </div>
+    <% /* <img class='home__img' src="<%= it.picture %>"> */ %>
+    <img class='home__img' src="https://source.unsplash.com/random/200x200">
 <% } %>
