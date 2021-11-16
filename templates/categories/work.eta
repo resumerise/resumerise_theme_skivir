@@ -7,17 +7,16 @@
             <div class="wrapper">
                 <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work, showDelete: true, id: work.id}) %>
                 <div class="title__wrapper">
-                    <% if (work.company) { %>
-                    <h4 id="wrapper__title">
-                        <%= work.company %>
-                    </h4>
-                    <% } %>
+                    <%~ include('key-value-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.work?.title, 
+						value: work.company,
+						showLabel: false,
+						classes: 'wrapper__title'}) %>
                     <%~ include('key-value-item', {
                         label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
                         value: work.position,
                         showLabel: false,
-                        id: 'title__detail',
-                    }) %>
+                        classes: 'title__detail'}) %>
                 </div>
                 <%~ include('date-range', {
                     formatDate: it.formatDate,
@@ -25,25 +24,20 @@
                     endDate: work.endDate,
                     present: work.present,
                     settings: it.resume.settings,
-                    showLabel: false,
-                }) %>
+                    showLabel: false}) %>
                 <%~ include('key-value-item', {
                     label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
                     value: work.website,
-                    showLabel: false,
-                    id: 'experience__info',
-                }) %>
+                    showLabel: false}) %>
                 <%~ include('key-value-item', {
                     label: it.resume.settings?.labels?.categoryProperty?.work?.summary, 
                     value: work.summary,
-                    id: 'section__description',
-                }) %>
+                    classes: 'section__description'}) %>
                 <%~ include('list', {
                     label: it.resume.settings?.labels?.categoryProperty?.work?.highlights, 
                     data: work.highlights,
                     showLabel: false,
-                    id: 'experience__list',
-                }) %>
+                    id: 'experience__list'}) %>
             </div>
         <% }) %>
     </div>

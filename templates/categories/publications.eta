@@ -10,31 +10,26 @@
                     label: it.resume.settings?.labels?.categoryProperty?.publication?.publisher, 
                     value: publication.publisher,
                     showLabel: false,
-                    id: 'wrapper__title',
-                }) %>
+                    classes: 'wrapper__title'}) %>
                 <%~ include('key-value-item', {
                     label: it.resume.settings?.labels?.categoryProperty?.publication?.name, 
                     value: publication.name,
                     showLabel: false,
-                    id: 'bold',
-                }) %>
+                    id: 'bold'}) %>
                 <%~ include('key-value-item', {
                     label: it.resume.settings?.labels?.categoryProperty?.publication?.releaseDate, 
                     value: it.formatDate(publication.releaseDate, it.resume.settings),
-                    id: 'date',
-                    showLabel: false,
-                }) %>
+                    classes: 'date',
+                    showLabel: false}) %>
                 <%~ include('key-value-item', {
                     label: it.resume.settings?.labels?.categoryProperty?.publication?.website, 
                     value: publication.website,
                     showLabel: false,
-                    id: 'publication-website',
-                }) %>
+                    id: 'publication-website'}) %>
                 <%~ include('key-value-item', {
                     label: it.resume.settings?.labels?.categoryProperty?.publication?.summary, 
                     value: publication.summary,
-                    id: 'section__description',
-                }) %>
+                    classes: 'section__description'}) %>
             </div>
         <% }) %>
     </div>

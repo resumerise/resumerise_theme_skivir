@@ -12,13 +12,11 @@
 					label: it.resume.settings?.labels?.categoryProperty?.reference?.name, 
 					value: reference.name,
 					showLabel: false,
-					id: 'wrapper__title',
-				}) %>
+					classes: 'wrapper__title'}) %>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.reference?.reference, 
 					value: reference.reference,
-					id: 'section__description',
-				}) %>
+					classes: 'section__description'}) %>
 			</div>
 		<% }) %>
 	</div>

@@ -10,14 +10,12 @@
 					label: it.resume.settings?.labels?.categoryProperty?.language?.language, 
 					value: language.language,
 					showLabel: false,
-					id: 'wrapper__title',
-				}) %>
+					classes: 'wrapper__title'}) %>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.language?.fluency, 
 					value: language.fluency,
 					showLabel: false,
-					id: 'language-fluency',
-				}) %>
+					id: 'language-fluency'}) %>
 			</div>
 		<% }) %>
 	</div>

@@ -11,11 +11,11 @@
 	</head>
 	<body>
 		<div class="l-main bd-container">
-				<!-- BASICS -->
-				<%~ include("basic", {
-					resume: it.resume,
-					formatDate: it.formatDate
-				}) %>
+			<!-- BASICS -->
+			<%~ include("basic", {
+				resume: it.resume,
+				formatDate: it.formatDate
+			}) %>
 
 			<div class="container__wrapper">
 				<div class="left">

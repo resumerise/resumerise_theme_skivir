@@ -10,20 +10,17 @@
 					label: it.resume.settings?.labels?.categoryProperty?.certificate?.title, 
 					value: certificate.title,
 					showLabel: false,
-					id: 'wrapper__title',
-				}) %>
+					classes: 'wrapper__title'}) %>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.certificate?.issueDate, 
 					value: it.formatDate(certificate.issueDate, it.resume.settings),
-					id: 'date',
-					showLabel: false,
-				}) %>
+					classes: 'date',
+					showLabel: false}) %>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.certificate?.issuer, 
 					value: certificate.issuer,
 					showLabel: false,
-					id: 'bold',
-				}) %>
+					id: 'bold'}) %>
 			</div>
 		<% }) %>
 	</div>

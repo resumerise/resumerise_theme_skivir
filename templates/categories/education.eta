@@ -12,8 +12,7 @@
 					label: it.resume.settings?.labels?.categoryProperty?.education?.institution, 
 					value: education.institution,
 					showLabel: false,
-					id: 'wrapper__title',
-				}) %>
+					classes: 'wrapper__title'}) %>
 				<%~ include('date-range', {
 					formatDate: it.formatDate, 
 					startDate: education.startDate,
@@ -26,24 +25,20 @@
 					label: it.resume.settings?.labels?.categoryProperty?.education?.area, 
 					value: education.area,
 					showLabel: false,
-					id: 'education-area',
-				}) %>
+					id: 'education-area'}) %>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.education?.studyType, 
 					value: education.studyType,
 					showLabel: false,
-					id: 'education-studyType',
-				}) %>
+					id: 'education-studyType'}) %>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.education?.gpa, 
 					value: education.gpa,
-					id: 'education-gpa',
-				}) %>
+					id: 'education-gpa'}) %>
 				<%~ include('list', {
 					label: it.resume.settings?.labels?.categoryProperty?.education?.courses, 
 					data: education.courses,
-					id: 'section__list',
-				}) %>
+					id: 'section__list'}) %>
 			</div>
 		<% }) %>
 	</div>

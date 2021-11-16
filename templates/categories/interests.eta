@@ -12,13 +12,11 @@
 					label: it.resume.settings?.labels?.categoryProperty?.interest?.name, 
 					value: interest.name,
 					showLabel: false,
-					id: 'wrapper__title',
-				}) %>
+					classes: 'wrapper__title'}) %>
 				<%~ include('list', {
 					label: it.resume.settings?.labels?.categoryProperty?.interest?.keywords, 
 					data: interest.keywords,
-					id: 'section__list',
-				}) %>
+					id: 'section__list'}) %>
 			</div>
 		<% }) %>
 	</div>
