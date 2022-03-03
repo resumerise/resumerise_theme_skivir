@@ -13,7 +13,7 @@
 					classes: 'wrapper__title'}) %>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.certificate?.issueDate, 
-					value: it.formatDate(certificate.issueDate, it.resume.settings),
+					value: certificate.issueDate,
 					classes: 'date',
 					showLabel: false}) %>
 				<%~ include('key-value-item', {
